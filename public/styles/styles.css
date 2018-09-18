@@ -1,3 +1,46 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-style: italic;
+}
+
+body {
+  padding: 15px 100px;
+}
+
+#wrapper {
+  text-align: center;
+  padding: 15px 0;
+
+}
+
+#checkinButtons {
+  display: inline-block;
+}
+
+#checkonButton {
+  display: inline-block;
+}
+
+#checkIn {
+  width: 400px;
+  height: 80px;
+  }
+
+  #update {
+    width: 400px;
+    height: 80px;
+    }
+
+#checkOn {
+  width: 400px;
+  height: 80px;
+  
+}
