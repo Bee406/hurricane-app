@@ -18,15 +18,15 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/checkins/:email", function(req, res){
-    db.CheckIn.findOne({
-      where: {
-        email: req.params.email
-      }
-    }).then(function(dbCheckIn) {
-      res.json(dbCheckIn);
-    });
-  });
+  // app.get("/api/checkins/:email", function(req, res){
+  //   db.CheckIn.findOne({
+  //     where: {
+  //       email: req.params.email
+  //     }
+  //   }).then(function(dbCheckIn) {
+  //     res.json(dbCheckIn);
+  //   });
+  // });
 
   // Create a new example
   app.post("/api/checkins", function(req, res) {
