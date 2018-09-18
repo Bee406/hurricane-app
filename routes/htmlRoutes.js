@@ -1,28 +1,23 @@
-var db = require("../models");
+var path = require("path");
 
 module.exports = function(app) {
-  // Load index page
-  app.get("/", function(req, res) {
-    db.CheckIn.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        CheckIns: dbExamples
-      });
+    app.get("/new_check_in", function(req,res){
+        res.sendFile(path.join(__dirname + "/../public/new_check_in.html"));
     });
+
+    app.get("/update_check_in", function(req,res){
+      res.sendFile(path.join(__dirname + "/../public/update_check-in.html"));
   });
 
-  // Load example page and pass in an example by id
-  app.get("/checkins/:id", function(req, res) {
-    db.CheckIn.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      console.log(dbExample.dataValues.id);
-      res.render("example", {
-        CheckIn: dbExample
-      });
-    });
-  });
+    app.get("/check_on", function(req,res){
+      res.sendFile(path.join(__dirname + "/../public/check_on.html"));
+});
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
-};
+    // app.use(function(req,res) {
+    //     res.sendFile(path.join(__dirname + "/../public/home.html"));
+    // });
+
+}
+
+
+
