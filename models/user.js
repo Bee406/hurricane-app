@@ -22,13 +22,19 @@ module.exports = function(sequelize, DataTypes){
             }
           },
           phone_number: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.BIGINT,
             allowNull: true,
             validate: {
-              len: [1]
+              len: [1, 10]
             }
           }
     });
+
+    User.associate = function(models){
+        User.hasMany(models.Status, {
+            onDelete: "cascade"
+        });
+    };
 
     return User;
 }
