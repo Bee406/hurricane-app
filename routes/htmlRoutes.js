@@ -6,7 +6,7 @@ module.exports = function(app) {
     });
 
     app.get("/update_check_in", function(req,res){
-      res.sendFile(path.join(__dirname + "/../public/update_check-in.html"));
+      res.sendFile(path.join(__dirname + "/../public/update_check_in.html"));
   });
 
     app.get("/check_on", function(req,res){
