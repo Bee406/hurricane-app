@@ -3,7 +3,6 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/api/users", function (req, res) {
-        console.log("test");
         db.User.findAll({
             include: [db.Status]
         }).then(function (dbUser) {
@@ -23,13 +22,23 @@ module.exports = function (app) {
     });
 
     app.post("/api/users", function (req, res) {
+
         db.User.create({
-            first_name: req.body.validationCustom01,
-            last_name: req.body.validationCustom02,
-            phone_number: 
-        }).then(function (dbUser) {
-            res.json(dbUser);
-        });
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            phone_number: req.body.phone_number,
+            email: req.body.email,
+        }).then(function (newUser) {
+            return newUser.id;
+        }).then(function(userid){
+            db.Status.create({
+                location: req.body.location,
+                comments: req.body.comments,
+                UserId: userid,
+            }).then(function(){
+                res.end();
+            })
+        })
     });
 
     app.delete("/api/users/:id", function (req, res) {

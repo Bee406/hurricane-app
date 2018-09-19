@@ -1,3 +1,4 @@
+var mode
 module.exports = function (sequelize, DataTypes) {
   var Status = sequelize.define("Status", {
     location: {
@@ -7,13 +8,13 @@ module.exports = function (sequelize, DataTypes) {
         len: [1]
       }
     },
-    intended_destination: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
+    // intended_destination: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   validate: {
+    //     len: [1]
+    //   }
+    // },
     comments: {
       type: DataTypes.TEXT,
       allowNull: true,
@@ -21,6 +22,7 @@ module.exports = function (sequelize, DataTypes) {
     }
 
   });
+
 
   Status.associate = function (models) {
     Status.belongsTo(models.User, {
