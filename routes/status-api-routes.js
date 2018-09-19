@@ -3,15 +3,15 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.post("/api/status", function (req, res) {
-        console.log("req.body.phone_number", req.body.phone_number);
+        console.log("NUMBER: ", req.body);
         
         db.User.findOne({
             where: {
                 phone_number: req.body.phone_number //this may change
             }
         }).then(function(user){
-            console.log("USER: ", user.dataValues.id);
-            //console.log("STATUSES", user.User.dataValues.id);
+            console.log("USER: ", user);
+            console.log("STATUSES", user.dataValues.id);
             return user.dataValues.id;
         }).then(function(userid){
             db.Status.create({
