@@ -14,6 +14,9 @@ h3 {
 body {
   padding: 15px 100px;
 }
+#SafeChex{
+  align-content: center
+}
 
 #wrapper {
   text-align: center;
@@ -45,5 +48,6 @@ body {
   width: 400px;
   height: 80px;
   margin-bottom: 25px;
+ 
   
 }

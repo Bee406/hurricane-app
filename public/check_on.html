@@ -20,20 +20,20 @@
 
         <form>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Enter phone number of the person your checking on:</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="(000) 000-0000">
+                    <label for="phoneNumber">Enter phone number of the person your checking on:</label>
+                    <input type="email" class="form-control" id="phoneNumber" aria-describedby="emailHelp" placeholder="(000) 000-0000">
                     <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
                     <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
              </form>
             
                   
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                  <button type="button" class="btn btn-primary" id="recentMessage" data-toggle="modal" data-target="#exampleModalLong">
                         Click for the most recent message:
                       </button>
                       
                       <!-- Modal -->
-                      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                      <div class="modal fade" id="exampleModalLong" id="phoneNumber" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -52,6 +52,8 @@
                           </div>
                         </div>
                       </div>    
+
+                     <script src = "js/new_check_on.js" type = "text/javascript"></script>
 
 
 
