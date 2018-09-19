@@ -32,15 +32,18 @@ body {
 #checkIn {
   width: 400px;
   height: 80px;
+  margin-bottom: 25px;
   }
 
   #update {
     width: 400px;
     height: 80px;
+    margin-bottom: 25px;
     }
 
 #checkOn {
   width: 400px;
   height: 80px;
+  margin-bottom: 25px;
   
 }
