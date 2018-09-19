@@ -34,14 +34,10 @@ $("#submit_button").on("click", function (event) {
                     url: "api/users/" + numberSearch
                 }).then(function(userData){
                     console.log("NEW USER DATA: ", JSON.stringify(userData));
-                    $("#new_user").html(
-                        "<h2>Name: " + userData.first_name + " " + userData.last_name + "</h2><br><p>Phone Number: "
-                        + userData.phone_number + "</p><p>Location: " + userData.Statuses[0].location + "</p><p>Comments: " + userData.Statuses[0].comments
-                    )
                 })
 
             })
-        }
+        }, 
 
     };
 
