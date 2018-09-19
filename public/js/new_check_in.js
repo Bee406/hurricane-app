@@ -2,11 +2,11 @@
 $("#submit_button").on("click", function (event) {
     event.preventDefault();
     var userStatus = {
-        first_name: $("#first_name").val().trim(),
-        last_name: $("#last_name").val().trim(),
-        phone_number: $("#phone_number").val().trim(),
+        first_name: $("#firstName").val().trim(),
+        last_name: $("#lastName").val().trim(),
+        phone_number: $("#phoneNumber").val().trim(),
         email: $("#email").val().trim(),
-        location: $("#general_location").val().trim(),
+        location: $("#generalLocation").val().trim(),
         comments: $("#comments").val().trim(),
     }
     var API = {
