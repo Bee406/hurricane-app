@@ -15,18 +15,18 @@ h3 {
 
 
 body {
-  background-image: url('../assets/disastersbg_collage.jpg');
+  background-image: url('../assets/disastersbg_2panel.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   
 }
 
-#indexbg {
+/* #indexbg {
   background-image: url('../assets/disastersbg_2panel.jpg');
 
   background-size: 100%;
   background-repeat: no-repeat;
-}
+} */
 
 .logo {
 
@@ -46,17 +46,18 @@ body {
 
 }
 
-.maincontainer {
+.indexmaincontainer {
   width:38%;
   height: 100vh;
+  background-color: white;
   
 }
 
+.newcheckcontainer {
 
-
-.col-lg-12 {
-  background-color: white;
 }
+
+
 
 
 #checkinButtons {
