@@ -3,6 +3,7 @@
 }
 
 h1 {
+  padding: 15px 0 0 0;
   text-align: center;
 }
 
@@ -11,8 +12,25 @@ h3 {
   font-style: italic;
 }
 
+
+
 body {
-  padding: 15px 100px;
+  background-image: url('../assets/disastersbg_collage.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  
+}
+
+#indexbg {
+  background-image: url('../assets/disastersbg_home.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #wrapper {
