@@ -32,6 +32,10 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+#SafeChex{
+  align-content: center
+}
+
 
 #wrapper {
   text-align: center;
@@ -63,5 +67,6 @@ body {
   width: 400px;
   height: 80px;
   margin-bottom: 25px;
+ 
   
 }
