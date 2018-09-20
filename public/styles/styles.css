@@ -6,6 +6,13 @@ h1 {
   padding: 15px 0 0 0;
   text-align: center;
 }
+h2 {
+  text-align: center; 
+ }
+ .logo {
+  
+ }
+
 
 h3 {
   /* text-align: center;   */
@@ -45,6 +52,10 @@ body {
   padding: 15px 0;
 
 }
+.phoneField {
+  margin: 0 auto;
+  display: block;  
+}
 
 .maincontainer {
   width:38%;
@@ -79,12 +90,24 @@ body {
     margin-bottom: 25px;
     }
 
-#checkOn {
+ #checkOn {
   width: 400px;
   height: 80px;
   margin-bottom: 25px;
+ }
 
-}
+@media screen and (max-width: 425px) {
+  body {
+    background-color:whitesmoke;
+    background-image: none; 
+  }}
+
+  @media screen and (max-width: 770px) {
+    body {
+      background-color:whitesmoke;
+      background-image: none; 
+    }}
+
 
 .bottom-buttons {
   height: 40px;
