@@ -5,6 +5,7 @@ $("#submit").on("click", function(event){
     var number = $("#phoneNumber").val().trim();
 
     console.log(comments);
+    
     $.ajax({
         type: "POST",
         url: "/api/status",
@@ -13,8 +14,11 @@ $("#submit").on("click", function(event){
             comments: comments
         }
     }).then(function (data){
-        console.log(data)
-    });
-
-    
+        $("modalIdHere").text("New status posted.");
+        console.log("SUCCESS");
+        console.log(data);
+    }).catch(function(error){
+        $("modalIdHere").text("That number is not in the database. Please go back and post your status as a new user.");
+        console.log("FAIL");
+    });  
 })
