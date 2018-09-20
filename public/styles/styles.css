@@ -28,6 +28,7 @@ body {
   
 }
 
+
 #indexbg {
   background-image: url('../assets/disastersbg_2panel.jpg');
 
@@ -66,7 +67,7 @@ body {
 
 
 .col-lg-12 {
-  background-color: white;
+  background-color:whitesmoke;
 }
 
 
