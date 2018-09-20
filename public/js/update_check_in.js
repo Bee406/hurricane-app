@@ -1,4 +1,4 @@
-$("#submit").on("click", function(event){
+$("#recentMessage").on("click", function(event){
 
     event.preventDefault();
     var comments = $("#comments").val().trim();
@@ -14,11 +14,12 @@ $("#submit").on("click", function(event){
             comments: comments
         }
     }).then(function (data){
-        $("modalIdHere").text("New status posted.");
+        $("#modalText").text("New status posted.");
         console.log("SUCCESS");
         console.log(data);
+
     }).catch(function(error){
-        $("modalIdHere").text("That number is not in the database. Please go back and post your status as a new user.");
+        $("#modalText").text("That number is not in the database. Please go back and post your status as a new user.");
         console.log("FAIL");
     });  
 })
