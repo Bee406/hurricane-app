@@ -34,7 +34,7 @@
               </div>
               <div class="col-md-4 mb-3">
                     <label for="phoneNumber">Phone Number/User name</label>
-                    <input type="tel" class="form-control" id="phoneNumber" placeholder="(000)-000-0000" required>
+                    <input type="tel" class="form-control" id="phoneNumber" placeholder="(000)-000-0000" pattern = "(0-9){3}-(0-9){3}-(0-9){4}" required>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -64,7 +64,7 @@
                           </div>
                           <div class="col-md-4 mb-3">
                             <label for="validationCustom02">Notification List for User</label>
-                            <input type="email" class="form-control" id="validationCustom02" placeholder="(000)000-0000" required>    
+                            <input type="tel" class="form-control" id="validationCustom02" placeholder="(000)000-0000" required>    
                             <div class="valid-feedback">
                               Looks good!
                             </div>
@@ -83,7 +83,7 @@
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle" placeholder="person">You’re account has been created.  Next time you log in click the “Update Previous Check In” button and use your phone number as your username to log in and and another check in.</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle" placeholder="person">You’re account has been created.  Next time you log in click the “Update Previous Check In” button and use your phone number as your username to log in and add another check in.</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -94,8 +94,8 @@
                           </div>
           
           </form>
+      
 
-          
       
 
  <script src = "js/new_check_in.js" type = "text/javascript"></script>

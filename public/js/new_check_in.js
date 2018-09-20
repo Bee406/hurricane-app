@@ -1,6 +1,8 @@
 
 $("#recentMessage").on("click", function (event) {
-    event.preventDefault();
+
+    
+    // event.preventDefault();
     var userStatus = {
         first_name: $("#firstName").val().trim(),
         last_name: $("#lastName").val().trim(),
