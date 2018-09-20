@@ -1,5 +1,5 @@
 
-$("#submit_button").on("click", function (event) {
+$("#recentMessage").on("click", function (event) {
     event.preventDefault();
     var userStatus = {
         first_name: $("#firstName").val().trim(),
@@ -8,7 +8,8 @@ $("#submit_button").on("click", function (event) {
         email: $("#email").val().trim(),
         location: $("#generalLocation").val().trim(),
         comments: $("#comments").val().trim(),
-    }
+    };
+    var existing = false;
     var API = {
         saveUser: function () {
             return $.ajax({
@@ -19,29 +20,40 @@ $("#submit_button").on("click", function (event) {
                 console.log("Created new user");
             });
         },
-        getUser: function (){
-            var userDb = [];
+        getUser: function () {
+            // var userDb = [];
             return $.ajax({
                 type: "GET",
-                url:"api/users"
-            }).then(function (data){
-                userDb.push(data);
-                // console.log(userDb[0][userDb[0].length-1]);
-                var numberSearch= userDb[0][userDb[0].length-1].phone_number;
-                console.log("PHONE NUMBER: ", numberSearch);
-                return $.ajax({
-                    type: "GET",
-                    url: "api/users/" + numberSearch
-                }).then(function(userData){
-                    console.log("NEW USER DATA: ", JSON.stringify(userData));
-                })
+                url: "api/users"
+            }).then(function (data) {
+                // userDb.push(data);
+                console.log("DATA: ", data);
+                for (var i = 0; i < data.length; i++) {
+                    console.log("Data#: ", data[i].phone_number);
+                    console.log("Input#: ", userStatus.phone_number);
+                    console.log("Existing: " + existing);
+                    if (data[i].phone_number == userStatus.phone_number) {
+                        existing = true;
+                    }
+                };
+
+                if (existing == true){
+                    $("#exampleModalLongTitle").text("This phone number has already been used. Please update your status or enter a different phone number.")
+                }
+                else{
+                    $("#exampleModalLongTitle").text("You’re account has been created.  Next time you log in click the “Update Previous Check In” button and use your phone number as your username to log in and and another check in");
+                };
 
             })
-        }, 
+        },
 
     };
 
-    API.saveUser(userStatus).then(API.getUser());
+    API.getUser().then(function () {
+        if (existing == false){
+            API.saveUser(userStatus)};
+    });
 });
+
 
 

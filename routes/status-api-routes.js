@@ -7,19 +7,27 @@ module.exports = function (app) {
         
         db.User.findOne({
             where: {
-                phone_number: req.body.phone_number //this may change
+                phone_number: req.body.phone_number
             }
         }).then(function(user){
+            if(!user)
+            {
+                console.log("NO USER");
+                throw new Error;
+            }
             console.log("USER: ", user);
-            console.log("STATUSES", user.dataValues.id);
+            console.log("ID", user.dataValues.id);
             return user.dataValues.id;
         }).then(function(userid){
             db.Status.create({
                 comments: req.body.comments,
                 UserId: userid,
             }).then(function(){
-                res.end();
+                //res.end();
+                res.sendStatus(200);
             })
-        })
+        }).catch(function(error){
+            res.sendStatus(418);
+        });
     });
 };
