@@ -15,7 +15,7 @@ h2 {
 
 
 h3 {
-  text-align: center;
+  /* text-align: center;   */
   font-style: italic;
 }
 
@@ -29,22 +29,25 @@ body {
 }
 
 #indexbg {
-  background-image: url('../assets/disastersbg_home.jpg');
+  background-image: url('../assets/disastersbg_2panel.jpg');
+
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-#SafeChex{
-  align-content: center
+
+  padding-top: 2vh;
+  padding-bottom: 5px;
 }
 
 
-#wrapper {
+#helpbutton {
+  border-color: black;
+  font-size: 12px;
+}
+
+#container {
   text-align: center;
   padding: 15px 0;
 
@@ -53,6 +56,19 @@ body {
   margin: 0 auto;
   display: block;  
 }
+
+.maincontainer {
+  width:38%;
+  height: 100vh;
+  
+}
+
+
+
+.col-lg-12 {
+  background-color: white;
+}
+
 
 #checkinButtons {
   display: inline-block;
@@ -78,10 +94,7 @@ body {
   width: 400px;
   height: 80px;
   margin-bottom: 25px;
- 
-  
-
-   }
+ }
 
 @media screen and (max-width: 425px) {
   body {
@@ -94,3 +107,16 @@ body {
       background-color:whitesmoke;
       background-image: none; 
     }}
+
+
+.bottom-buttons {
+  height: 40px;
+  background-color: #c0c0c0;
+  margin-bottom: 10vh;
+}
+
+/* mouse over link */
+.bottom-buttons:hover {
+  background-color: gray;
+  color: blue;
+}

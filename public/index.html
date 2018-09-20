@@ -1,71 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./styles/styles.css"> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 
 </head> 
 
-<body>
-   <!-- This div is to differentiate the home page body background from the other pages -->
-    <div id=indexbg>
-        <!-- Logo -->
-        <a href="./index.html"><img src="./assets/SafeChexLogo2.png" class="logo" alt="SafeChex Logo"/></a>
+<body id="indexbg">
 
-    
-    <h2>Always Know</h2> 
-        
-        <div id="wrapper">
-            <div id="checkinButtons">
-               
-               
-                <button type="button" class="btn btn-lg primary" data-toggle="modal" data-target="#exampleModal">
-                        Instructions to start
-                      </button>
-                       <!-- Modal -->
-                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
+    <div class="container maincontainer d-flex justify-content-center">
+        <div class="row">
+            <!-- Logo -->
+            <div class="col-lg-12 d-flex justify-content-center logo">
+
+                <a href="./index.html"><img src="./assets/SafeChexLogo-v2.png" class="logo" alt="SafeChex Logo" /></a>
+            </div>
+
+            <!-- Tagline -->
+            <div class="col-lg-12 d-flex justify-content-center alwaysKnow-align">
+                <h3>Always Know</h3>
+
+            </div>
+
+
+            <!-- Action Buttons -->
+
+            <div class="col-lg-12 d-flex justify-content-center">
+
+                <div id="checkinButtons">
+
+                    <a href="/new_check_in"><button type="button" class="btn btn-lg btn-primary" id="checkIn">
+                            <h4><span class=""></span> New User Check In</h4>
+                        </button></a>
+                    <br>
+                    <a href="/update_check_in"><button type="button" class="btn btn-lg btn-primary" id="update">
+                            <h4><span class=""></span> Returning User Check In</h4>
+                        </button></a>
+                    <br>
+                    <a href="/check_on"><button type="button" class="btn btn-lg btn-secondary" id="checkOn">
+                            <h4><span class=""></span> Check On Someone</h4>
+                        </button></a>
+                    <br>
+
+                </div>
+            </div>
+
+
+            <!-- Help & About Us Buttons -->
+
+            <div class="col-lg-12 d-flex justify-content-center justify-content-around align-items-stretch">
+
+                <!-- About button -->
+
+                <button type="button" class="bottom-buttons btn btn-lg primary" data-toggle="modal" data-target="#aboutButton" id="helpbutton">
+                    About
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="aboutButton" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">How to get started</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
+                                <h5 class="modal-title" id="exampleModalLabel">What is SafeChex?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
                             <div class="modal-body">
-                            SafeChex is designed for a person to share their whereabouts and have an authorized user to retrieve that information. 
-                            A valid phone number is needed to log your whereabouts and to retrieve your status. 
-                            If you want to track your status go to new user check in. Update your status as it changes through the update previous check in.
-                            If you want to check on the status of someone, go to check on someone. 
+                                    SafeChex is designed to help keep people affected by natural disasters (“Posters”) stay connected to (“Viewers”) by passing updates (“check ins”) into our lightweight application when internet connectivity is limited but possible.
+                                    <br>
+                                    Our application allows you to quickly and easily set up a line of communication between you and your loved ones by posting occasional updates that are easily viewable by them without any prior setup.  Post locations, status updates, transportation plans, whatever you feel is the most crucial information.  And once your loved ones view your posts, they can receive text notifications every time a new check in is posted.
+                                    <br>
+                                    SafeChex is built to be a lightweight application so it can run quickly and effectively on laptops at remote locations such as Red Cross shelters, and, in the event of weak or sporadic cell phone service should be able to load on a smart phone.
+                                    <br>
+                                    So even if you don’t have constant internet access, you can still keep the people you care about in the know.  
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                             
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
                             </div>
-                          </div>
                         </div>
-                      </div>
-                <br>
-                <br>
-                <a href="/new_check_in"><button type="button" class="btn btn-lg btn-primary" id="checkIn"><h4><span class=""></span> New user check in</h4></button></a>
-                <br>
-                <a href="/update_check_in"><button type="button" class="btn btn-lg btn-primary" id="update"><h4><span class=""></span> Update previous check in</h4></button></a>
-                <br>
-                <a href="/check_on"><button type="button" class="btn btn-lg btn-primary" id="checkOn"><h4><span class=""></span> Check on someone</h4></button></a>
-                <br>
-                
+                    </div>
+                </div>
+
+                <button type="button" class="bottom-buttons btn btn-lg primary" data-toggle="modal" data-target="#helpButton" id="helpbutton">
+                    Help
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="helpButton" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">How to get started</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                    New User Check In - If you have been affected by a natural disaster and this is your first time to the site. This will help you quickly set up a new account and make your first check in.
+
+                                    Returning User Check In - If you have been affected by a natural disaster and already have an existing SafeChex account, click here to add another check in.
+                                    
+                                    Check On Someone - If you want to check on the status of loved ones that may have been affected by a natural disaster, click here to search for their check ins and sign up for check in updates.
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
-            
         </div>
-        
+
+
+
 
 </body>
 
