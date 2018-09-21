@@ -1,85 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./styles/styles.css">   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SafeChex - Update Check In</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 
 </head>
-<h1>SafeChex<i class="fas fa-home"></i></h1>
 
-<h2>Update Previous Check In</h2>
+<body id="updatebg">
+
+  <!-- Primary Container -->
+  <div class="container newcheckcontainer d-flex justify-content-center">
+    <div class="row">
+
+      <!-- Logo -->
+      <div class="col-lg-12 d-flex justify-content-center">
+        <a href="./index.html"><img src="./assets/SafeChexLogo-v2.png" class="logo" alt="SafeChex Logo"></a>
+      </div>
+
+      <!-- Tagline -->
+      <div class="col-lg-12 d-flex justify-content-center">
+        <h3>Update Previous Check In</h3>
+      </div>
+
+      <!-- Form start -->
+
+      <div class="col-lg-12 d-flex justify-content-center">
+        <form class="needs-validation" novalidate>
+          <div class="form-row">
 
 
-      
-                
-                
-        <form>
-            
-            <div class="form-group">
-            <div class="col-md-4 mb-3">
-                <label for="phoneNumber">Enter phone number used for Check in.</label>
-                <input  class="form-control" id="phoneNumber" aria-describedby="emailHelp" placeholder="(000) 000-0000">
-                <small id="emailHelp" class="form-text text-muted"></small>
+
+            <div class="col-md-12 col-sm-12 mb-3 form-group">
+              <label for="phoneNumber">Enter Your Phone Number</label>
+              <input class="form-control" id="phoneNumber" aria-describedby="emailHelp" placeholder="000-000-0000">
+              <small id="emailHelp" class="form-text text-muted"></small>
             </div>
-            <div class="form-group">
-            <div class="col-md-4 mb-3">
-                    <label for="comments">Write your message</label>
-                    <input  class="form-control" id="comments" aria-describedby="emailHelp" placeholder="example: Im fine...landed safely...hike completed">
-                    <small id="emailHelp" class="form-text text-muted"></small>
-                </div>
-
-                
-            <button type="button" class="btn btn-primary phoneField " id="recentMessage" data-toggle="modal" data-target="#exampleModalLong">
-                    Update your message:
-                </button>
-                  
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModalLong" id="phoneNumber" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle" placeholder="person">Current check in status for </h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div id = "modalText" class="modal-body">
-
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        
-                        </div>
-                      </div>
-                    </div>
-                  </div>    
-         </form>
-        
-              
-              
-         
-         
-         
 
 
+            <div class="col-md-12 col-sm-12 mb-3 form-group">
+              <label for="comments">Write Your Message</label>
+              <textarea rows="4" class="form-control" id="comments" aria-describedby="emailHelp" placeholder="Example: Everyone safe. Water level rose at home, heading to Uncle Steve's in Tampa."></textarea>
+              <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+
+            <button type="button" class="btn btn-primary phoneField " id="recentMessage" data-toggle="modal"
+              data-target="#exampleModalLong">
+              Post Check In
+            </button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--  the above div this closes the row div -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" id="phoneNumber" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle" placeholder="person">Current check in status for
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="modalText" class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
+  </div>
 
-
-
-         <script src = "js/update_check_in.js" type = "text/javascript"></script>
-
+  <script src="js/update_check_in.js" type="text/javascript"></script>
 
 
 </body>
+
 </html>
