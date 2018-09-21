@@ -8,32 +8,52 @@ h1 {
 }
 
 h3 {
-  /* text-align: center;   */
+  padding: 10px;
   font-style: italic;
 }
 
 
 
-body {
+/* body {
   background-image: url('../assets/disastersbg_2panel.jpg');
-  background-size: 100%;
+  background-size: 150%;
+  background-position: center;
   background-repeat: no-repeat;
-  
-}
+  } */
 
-/* #indexbg {
+  #indexbg {
   background-image: url('../assets/disastersbg_2panel.jpg');
-
-  background-size: 100%;
+  background-size: 150%;
+  background-position: center;
   background-repeat: no-repeat;
-} */
+  }
+
+#updatebg {
+  background-image: url('../assets/Colorado_Wildfires-v2.JPG');
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+#newbg  {
+  background-image: url('../assets/Hurricane-Irma-2-v2.jpg');
+  background-size: 150%;
+  background-position: top;
+  background-repeat: no-repeat;
+  }
+
+#checkon  {
+  background-image: url('../assets/Sandy-storm-surge-v2.jpg');
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
 
 .logo {
 
   padding-top: 2vh;
   padding-bottom: 5px;
 }
-
 
 #helpbutton {
   border-color: black;
@@ -53,8 +73,10 @@ body {
   
 }
 
-.newcheckcontainer {
 
+
+.newcheckcontainer {
+padding-bottom: 20px;
 }
 
 
